@@ -1,2 +1,2 @@
-# Bean-Store-Project
+# Bean Store Project
 Project for class.
