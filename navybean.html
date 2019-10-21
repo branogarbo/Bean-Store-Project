@@ -1,0 +1,67 @@
+<html>
+  <head>
+    
+    <title>Navy Beans</title>
+    <link href="beanpage.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=K2D|Lobster" rel="stylesheet">
+    <link rel="icon" type="image/ico" href="https://vignette.wikia.nocookie.net/mrbean/images/4/4b/Mr_beans_holiday_ver2.jpg/revision/latest?cb=20100424114324">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
+    <script src="interactivity.js"></script>
+
+    <script>
+      function mult() {
+        input.value = input.value.slice(0,6);
+
+        pricemult.innerHTML = "$" + (input.value * 500.8 * 1.04712).toFixed(2) + " (with tax)";
+        pricemult.style = "color:blue;"; 
+
+        if (input.value == 0 || input.value == "") {
+          pricemult.innerHTML = "enter quantity";
+          pricemult.style = "color:red;";
+        }
+      }
+    </script>
+    <style>
+      #pic {
+        background:url('https://www.thedailymeal.com/sites/default/files/2016/01/04/3-black%20eyed%20peas-flickr.jpg');
+        background-size:cover;
+        color:rgb(0, 255, 85);
+      }
+    </style>
+  </head>
+  <body>
+        
+    <div id="fixedhed">
+      <div id="logo" onclick="eastereggA()">Brian's Bean Shop</div>
+      <ul class="navbar">
+        <a href="locations.html"><li id="right">Locations</li></a>
+        <a href="aboutus.html"><li>About Us</li></a>
+        <a href="index.html"><li id="left">Shop</li></a>
+      </ul> 
+    </div>
+
+    <div id="desc">
+      <div id="pic">
+        <h1>Navy Beans</h1>
+        <h1>$500.80/lb</h1>
+      </div>
+
+      <h1>Price: <span id="pricemult">enter quantity</span></h1>
+      <div id="inputbar">
+        <input type="number" placeholder="quantity (lbs)" id="input" oninput="mult()" onkeydown="ent(event)">
+        <button type="button" onmousedown="show()">purchase</button>
+      </div>
+      <b>The name "Navy bean" is an American term coined because the US Navy has served the beans as a staple to its sailors since the mid-1800s.
+        In Australia, navy bean production began during World War II when it became necessary to find an economical way of supplying a nutritious food to the many troops - especially American troops - based in Queensland. The United States military maintained a large base in Kingaroy and had many bases and camps throughout south-east Queensland. It actively encouraged the widespread planting of the beans. Kingaroy is known as the Baked Bean Capital of Australia. Another popular name for the bean during this time was "the Yankee bean".</b>
+    </div>
+
+    <div id="hidden">
+      <div>
+        <h1>You're all set!</h1>
+        <b>We have withdrawn the payment from your bank account, your package will arrive soon. Enjoy your beans!</b>
+        <span onclick="hide()">OK</span>
+      </div>
+    </div>
+    
+  </body>
+</html>

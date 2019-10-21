@@ -1,0 +1,65 @@
+<html>
+  <head>
+    
+    <title>Kindey Beans</title>
+    <link href="beanpage.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=K2D|Lobster" rel="stylesheet">
+    <link rel="icon" type="image/ico" href="https://vignette.wikia.nocookie.net/mrbean/images/4/4b/Mr_beans_holiday_ver2.jpg/revision/latest?cb=20100424114324">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
+    <script src="interactivity.js"></script>
+    
+    <script>
+      function mult() {
+        input.value = input.value.slice(0,6);
+
+        pricemult.innerHTML = "$" + (input.value * 439.5 * 1.04712).toFixed(2) + " (with tax)";
+        pricemult.style = "color:blue;";
+
+        if (input.value == 0 || input.value == "") {
+          pricemult.innerHTML = "enter quantity";
+          pricemult.style = "color:red;";
+        }
+      }
+    </script>
+    <style>
+      #pic {
+        background:url('https://www.kitchenkneads.com/wp-content/uploads/2016/06/dried-light-red-kidney-beans-20-lbs.jpg');
+        color:cyan; 
+      }
+    </style>
+  </head>
+  <body>
+        
+    <div id="fixedhed">
+      <div id="logo" onclick="eastereggA()">Brian's Bean Shop</div>
+      <ul class="navbar">
+        <a href="locations.html"><li id="right">Locations</li></a>
+        <a href="aboutus.html"><li>About Us</li></a>
+        <a href="index.html"><li id="left">Shop</li></a>
+      </ul>
+    </div>
+
+    <div id="desc">
+      <div id="pic">
+        <h1>Kidney Beans</h1>
+        <h1>$439.50/lb</h1>
+      </div>
+
+      <h1>Price: <span id="pricemult">enter quantity</span></h1>
+      <div id="inputbar">
+        <input type="number" placeholder="quantity (lbs)" id="input" oninput="mult()" onkeydown="ent(event)">
+        <button type="button" onmousedown="show()">purchase</button>
+      </div>
+      <b>Red kidney beans are commonly used in chili con carne and are an integral part of the cuisine in northern regions of India, where the beans are known as rajma and are used in a dish of the same name. Red kidney beans are used in New Orleans and much of southern Louisiana for the classic Monday Creole dish of red beans and rice. The smaller, darker red beans are also used, particularly in Louisiana families with a recent Caribbean heritage. Small kidney beans used in La Rioja, Spain, are called caparrones. In the Netherlands and Indonesia, kidney beans are usually served as soup called brenebon. In the Levant a common dish consisting of kidney bean stew usually served with rice is known as fasoulia.</b>
+    </div>
+
+    <div id="hidden">
+      <div>
+        <h1>You're all set!</h1>
+        <b>We have withdrawn the payment from your bank account, your package will arrive soon. Enjoy your beans!</b>
+        <span onclick="hide()">OK</span>
+      </div>
+    </div>
+    
+  </body>
+</html>

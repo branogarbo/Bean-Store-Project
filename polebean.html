@@ -1,0 +1,68 @@
+<html>
+  <head>
+    
+    <title>Pole Beans</title>
+    <link href="beanpage.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=K2D|Lobster" rel="stylesheet">
+    <link rel="icon" type="image/ico" href="https://vignette.wikia.nocookie.net/mrbean/images/4/4b/Mr_beans_holiday_ver2.jpg/revision/latest?cb=20100424114324">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
+    <script src="interactivity.js"></script>
+    
+    <script>
+      function mult() {
+        input.value = input.value.slice(0,6);
+
+        pricemult.innerHTML = "$" + (input.value * 869.5 * 1.04712).toFixed(2) + " (with tax)";
+        pricemult.style = "color:blue;"; 
+
+        if (input.value == 0 || input.value == "") {
+          pricemult.innerHTML = "enter quantity";
+          pricemult.style = "color:red;";
+        }
+      }
+    </script>
+    <style>
+      #pic {
+        background:url('https://1rxbfb2hflyo2jt6jd3f6sjr-wpengine.netdna-ssl.com/wp-content/uploads/2014/11/BN126-1.jpg');
+        background-size:cover;
+        color:yellow;
+      }
+    </style>
+  </head>
+  <body>
+        
+    <div id="fixedhed">
+      <div id="logo" onclick="eastereggA()">Brian's Bean Shop</div>
+      <ul class="navbar">
+        <a href="locations.html"><li id="right">Locations</li></a>
+        <a href="aboutus.html"><li>About Us</li></a>
+        <a href="index.html"><li id="left">Shop</li></a>
+      </ul>
+    </div>
+
+    <div id="desc">
+      <div id="pic">
+        <h1>Pole Beans</h1>
+        <h1>$869.50/lb</h1>
+      </div>
+
+      <h1>Price: <span id="pricemult">enter quantity</span></h1>
+      <div id="inputbar">
+        <input type="number" placeholder="quantity (lbs)" id="input" oninput="mult()" onkeydown="ent(event)">
+        <button type="button" onmousedown="show()">purchase</button>
+      </div>
+      <b>In the US, in 1978, the scarlet runner was widely grown for its attractive flowers primarily as an ornamental. Since that time, many US gardeners have adopted the bean as a regular member of the vegetable garden. The flower is known as a favourite of hummingbirds. In the UK – where the vegetable is a popular choice for kitchen gardens and allotments – the flowers are often ignored, or treated as an attractive bonus to cultivating the plant for the beans.
+        The seeds of the plant can be used fresh or as dried beans. The pods are edible whole while they are young and not yet fibrous. The starchy roots are still eaten by Central American Natives.
+        The beans are used in many cuisines. It is a popular side vegetable in British cuisine. A variety named 'Judión de la Granja' producing large, white, edible beans is cultivated in San Ildefonso, Spain. It is the basis of a Segovian regional dish also named Judiones de la Granja, in which the beans are mixed with pig's ears, pig's trotters, and chorizo, amongst other ingredients.</b>
+    </div>
+
+    <div id="hidden">
+      <div>
+        <h1>You're all set!</h1>
+        <b>We have withdrawn the payment from your bank account, your package will arrive soon. Enjoy your beans!</b>
+        <span onclick="hide()">OK</span>
+      </div>
+    </div>
+    
+  </body>
+</html>

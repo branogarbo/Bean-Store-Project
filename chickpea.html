@@ -1,0 +1,67 @@
+<html>
+  <head>
+    
+    <title>Chickpeas</title>
+    <link href="beanpage.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=K2D|Lobster" rel="stylesheet">
+    <link rel="icon" type="image/ico" href="https://vignette.wikia.nocookie.net/mrbean/images/4/4b/Mr_beans_holiday_ver2.jpg/revision/latest?cb=20100424114324">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
+    <script src="interactivity.js"></script>
+    
+    <script>
+      function mult() {
+        input.value = input.value.slice(0,6);
+
+        pricemult.innerHTML = "$" + (input.value * 39.99 * 1.04712).toFixed(2) + " (with tax)";
+        pricemult.style = "color:blue;"; 
+
+        if (input.value == 0 || input.value == "") {
+          pricemult.innerHTML = "enter quantity";
+          pricemult.style = "color:red;";
+        }
+      }
+    </script>
+    <style>
+      #pic {
+        background:url('https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/hires/2016/scientificdi.jpg');
+        background-size:cover;
+        color:blue;
+      }
+    </style>
+  </head>
+  <body>
+        
+    <div id="fixedhed">
+      <div id="logo" onclick="eastereggA()">Brian's Bean Shop</div>
+      <ul class="navbar">
+        <a href="locations.html"><li id="right">Locations</li></a>
+        <a href="aboutus.html"><li>About Us</li></a>
+        <a href="index.html"><li id="left">Shop</li></a>
+      </ul>
+    </div>
+
+    <div id="desc">
+      <div id="pic">
+        <h1>Chickpeas</h1>
+        <h1>$39.99/lb</h1>
+      </div>
+
+      <h1>Price: <span id="pricemult">enter quantity</span></h1>
+      <div id="inputbar">
+        <input type="number" placeholder="quantity (lbs)" id="input" oninput="mult()" onkeydown="ent(event)">
+        <button type="button" onmousedown="show()">purchase</button>
+      </div>
+      <b>Domesticated chickpeas have been found in the aceramic levels of Jericho (PPNB) along with Çayönü in Turkey and in Neolithic pottery at Hacilar, Turkey. They were found in the late Neolithic (about 3500 BC) at Thessaly, Kastanas, Lerna and Dimini, Greece. In southern France, Mesolithic layers in a cave at L'Abeurador, Aude, have yielded wild chickpeas carbon dated to 6790±90 BC.
+        Chickpeas are mentioned in Charlemagne's Capitulare de villis (about 800 AD) as cicer italicum, as grown in each imperial demesne. Albertus Magnus mentions red, white, and black varieties. Nicholas Culpeper noted "chick-pease or cicers" are less "windy" than peas and more nourishing. Ancient people also associated chickpeas with Venus because they were said to offer medical uses such as increasing sperm and milk, provoking menstruation and urine, and helping to treat kidney stones. "White cicers" were thought to be especially strong and helpful.</b>
+    </div>
+
+    <div id="hidden">
+      <div>
+        <h1>You're all set!</h1>
+        <b>We have withdrawn the payment from your bank account, your package will arrive soon. Enjoy your beans!</b>
+        <span onclick="hide()">OK</span>
+      </div>
+    </div>
+    
+  </body>
+</html>

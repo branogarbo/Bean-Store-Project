@@ -1,0 +1,68 @@
+<html>
+  <head>
+    
+    <title>Pinto Beans</title>
+    <link href="beanpage.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=K2D|Lobster" rel="stylesheet">
+    <link rel="icon" type="image/ico" href="https://vignette.wikia.nocookie.net/mrbean/images/4/4b/Mr_beans_holiday_ver2.jpg/revision/latest?cb=20100424114324">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
+    <script src="interactivity.js"></script>
+    
+    <script>
+      function mult() {
+        input.value = input.value.slice(0,6);
+
+        pricemult.innerHTML = "$" + (input.value * 75.99 * 1.04712).toFixed(2) + " (with tax)";
+        pricemult.style = "color:blue;"; 
+
+        if (input.value == 0 || input.value == "") {
+          pricemult.innerHTML = "enter quantity";
+          pricemult.style = "color:red;";
+        }
+      }
+    </script>
+    <style>
+      #pic {
+        background:url('https://images-na.ssl-images-amazon.com/images/I/51XusC3xCnL.jpg');
+        background-size:cover;
+        color:rgb(157, 255, 0);
+      }
+    </style>
+  </head>
+  <body>
+        
+    <div id="fixedhed">
+      <div id="logo" onclick="eastereggA()">Brian's Bean Shop</div>
+      <ul class="navbar">
+        <a href="locations.html"><li id="right">Locations</li></a>
+        <a href="aboutus.html"><li>About Us</li></a>
+        <a href="index.html"><li id="left">Shop</li></a>
+      </ul>
+    </div>
+
+    <div id="desc">
+      <div id="pic">
+        <h1>Pinto Beans</h1>
+        <h1>$75.99/lb</h1>
+      </div>
+
+      <h1>Price: <span id="pricemult">enter quantity</span></h1>
+      <div id="inputbar">
+        <input type="number" placeholder="quantity (lbs)" id="input" oninput="mult()" onkeydown="ent(event)">
+        <button type="button" onmousedown="show()">purchase</button>
+      </div>
+      <b>The pinto bean is the bean commonly used fresh or canned in many dishes, especially refried beans. It is popular in chili con carne, although kidney beans, black beans, and many others may be used in other locales.
+          Pinto beans are found in Brazilian cuisine. Legumes, mainly the common bean, are a staple food everywhere in the country, cultivated since 3000 BC, along with starch-rich foods, such as rice, manioc, pasta, and other wheat-based products, polenta and other corn-based products, potatoes and yams.
+          In the Southern United States, pinto beans were once a staple, especially during the winter months. Some organizations and churches in rural areas still sponsor "pinto bean suppers" for social gatherings and fund raisers.</b>
+    </div>
+
+    <div id="hidden">
+      <div>
+        <h1>You're all set!</h1>
+        <b>We have withdrawn the payment from your bank account, your package will arrive soon. Enjoy your beans!</b>
+        <span onclick="hide()">OK</span>
+      </div>
+    </div>
+    
+  </body>
+</html>

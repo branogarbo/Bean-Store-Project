@@ -1,0 +1,112 @@
+body {
+  background:rgb(221, 246, 255);
+  color:rgb(61, 72, 83);
+  font-family:"K2D", sans-serif;
+  animation:fadein 0.6s;
+}
+@keyframes fadein {
+  from {opacity:0;}
+  to {opacity:1;}
+}
+#logo { 
+  border-radius:40px;
+  background:linear-gradient(45deg,#51A3A3 0%,#51A3A3 20%,#75485E 20%,#75485E 40%,#CB904D 40%,#CB904D 60%,#DFCC74 60%,#DFCC74 80%,#C3E991 80%,#C3E991 100%);
+  color:white;    
+  box-shadow:10px 10px 0 rgba(126, 126, 126, 0.808);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  float:left;
+  height:80px;
+  width:350px;
+  font-size:2em;
+  font-family:"Lobster";
+  margin:17px 0 0 40px;
+  cursor:default;
+  user-select:none;
+}
+.navbar {
+  margin:30px 55px 0 0;
+}
+.navbar li {
+  float:right;
+  padding:30px;
+  background:cyan;
+  list-style-type:none;
+  transition:background 0.5s;
+  color:black;
+  font-weight:bold;
+}
+#left {
+  border-radius:10px 0 0 0;
+}
+#right {
+  border-radius:0 10px 0 0;
+  border-bottom:2px solid blue; 
+  padding:29px 30px;
+}
+.navbar li:hover {
+  background:rgb(0, 183, 255);
+}
+#fixedhed {
+  position:fixed;
+  width:100%;
+  background:rgba(189, 189, 189, 0.5);
+  left:0;
+  top:0;
+  border-bottom:1px solid rgb(145, 145, 145);
+  z-index:1;
+}
+#content {
+  margin:90px 30px;
+  padding:20px;
+  text-align:center;
+}
+#content b {
+  font-size:125%;
+  line-height:200%;
+}
+.cont {
+  margin:30px auto;
+  display:grid;
+  grid-template-columns:auto auto auto;
+  width:calc(100% - 60px);
+  height:400px;
+}
+.loc {
+  border:3px solid rgb(182, 182, 182);
+  box-shadow:5px 5px 0 grey;
+  width:245px;
+  height:200px;
+  margin:0 auto;
+  border-radius:20px;
+}
+.loctxt {
+  margin:10px 0 30px 0;
+  font-weight:bold;
+}
+#kakaako {
+  background:url('https://saltatkakaako.com/wp-content/uploads/2018/06/050518-6-PILLARS-SALT-KAKAAKO-056-1024x683.jpg');
+  background-size:cover;
+}
+#alamoana {
+  background:url('https://1bo9y82e76el2rf8ms1m5i0r-wpengine.netdna-ssl.com/wp-content/uploads/2017/07/Ala-Moana-Center-Ewa-Wing-Day.jpg');
+  background-size:cover;
+}
+#kukuigrove {
+  background:url('https://www.nkolandscaping.com/hubfs/Screen_Shot_2015-12-22_at_4.14.33_PM.png?t=1535134094210');
+  background-size:cover;
+}
+#kapaa {
+  background:url('https://cdn.onlyinyourstate.com/wp-content/uploads/2016/12/7122840305_0229f111d2_k-e1483023543237-700x427.jpg');
+  background-size:cover;
+}
+#kahului {
+  background:url('http://onlyinhawaii.org/wp-content/uploads/2014/07/Maui-Mall-Kahului-Maui-Hawaii.jpg');
+  background-size:cover;
+}
+#lahaina {
+  background:url('https://www.ohanafunhawaii.com/wp-content/uploads/2017/03/fullsizeoutput_340-1024x683.jpeg');
+  background-size:cover;
+}
+

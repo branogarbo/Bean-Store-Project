@@ -1,0 +1,169 @@
+html {
+  scroll-behavior:smooth;
+}
+body {
+  background:rgb(221, 246, 255);
+  font-family:"K2D", sans-serif;
+  animation:fadein 0.6s;
+}
+@keyframes fadein {
+  from {opacity:0;}
+  to {opacity:1;}
+}
+#logo { 
+  border-radius:40px;
+  background:linear-gradient(45deg,#51A3A3 0%,#51A3A3 20%,#75485E 20%,#75485E 40%,#CB904D 40%,#CB904D 60%,#DFCC74 60%,#DFCC74 80%,#C3E991 80%,#C3E991 100%);
+  color:white;    
+  box-shadow:10px 10px 0 rgba(126, 126, 126, 0.808);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  float:left;
+  height:80px;
+  width:350px;
+  font-size:2em;
+  font-family:"Lobster";
+  margin:17px 0 0 40px;
+  cursor:default;
+  user-select:none;
+}
+.navbar {
+  margin:30px 38px 0 0;
+}
+.navbar li {
+  float:right;
+  padding:30px;
+  background:cyan;
+  list-style-type:none;
+  transition:background 0.5s;
+  color:rgb(51, 62, 73);
+  font-weight:bold;
+}
+#left {
+  border-radius:10px 0 0 0;
+  border-bottom:2px solid blue; 
+  padding:29px 30px;
+}
+#right {
+  border-radius:0 10px 0 0;
+}
+.navbar li:hover {
+  background:rgb(0, 183, 255);
+}
+#fixedhed {
+  position:fixed;
+  width:100%;
+  background:rgba(189, 189, 189, 0.5);
+  left:0;
+  top:0;
+  border-bottom:1px solid rgb(145, 145, 145);
+  z-index:1;
+}
+.inventory {
+  margin:110px 30px 150px;
+  display:grid;
+  grid-template-columns:auto auto auto;
+  grid-template-rows:125px 400px 400px 400px;
+  width:calc(100% - 60px);
+  height:150%;
+}
+.inventory a {
+  border:3px solid rgb(182, 182, 182);
+  box-shadow:5px 5px 0 grey;
+  width:16.3vw;
+  height:calc(16.3vw + 45px);
+  margin:0 auto;
+  border-radius:20px;
+  text-decoration:none;
+  display:flex;
+  flex-direction:column;
+  font-size:125%;
+  transition:border 0.1s;
+  padding:15px;
+}
+@media only screen and (max-width:1000px) {
+  .inventory a {
+    font-size:1rem;
+  }
+}
+@media only screen and (max-width:800px) {
+  .inventory a {
+    font-size:0.5rem;
+  }
+}
+.inventory a:hover {
+  border:3px solid gold;
+  transition:color 1s;
+}
+.inventory h1 {
+  margin:auto;
+}
+/*had to change padding to compensate for the margin:auto not working*/
+#regoff {
+  grid-column:2 / 4;
+  padding-left:155px;
+  color:rgb(51, 62, 73);
+}
+#sale {
+  color:rgb(51, 62, 73);
+}
+/*had to change padding to compensate for the margin:auto not working*/
+#sale, #regoff {
+  margin-left:180px;
+}
+#item1 {
+  background:url('https://cdn.sodelicious.recipes/wp-content/uploads/2018/05/types-of-beans-fava-beans-1024x777.jpg');
+  background-size:cover;
+  color:red;
+}
+#item2 {
+  background:url('http://farmerstoyou.com/images/products/organic_black_turtle_dry_beans_331.jpg');
+  color:gold;
+}
+#item3 {
+  background:url('https://www.kitchenkneads.com/wp-content/uploads/2016/06/dried-light-red-kidney-beans-20-lbs.jpg');
+  color:cyan; 
+}
+#item4 {
+  background:url('https://images-na.ssl-images-amazon.com/images/I/51XusC3xCnL.jpg');
+  background-size:cover;
+  color:rgb(157, 255, 0);
+}
+#item5 {
+  background:url('https://www.thedailymeal.com/sites/default/files/2016/01/04/3-black%20eyed%20peas-flickr.jpg');
+  background-size:cover;
+  color:rgb(0, 255, 85);
+}
+#item6 {
+  background:url('http://image.koreatimes.com/photos/LosAngeles/20110316/17-s2-4.jpg');
+  background-size:cover;
+  color:rgb(255, 0, 200);
+}
+#item7 {
+  background:url('https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/hires/2016/scientificdi.jpg');
+  background-size:cover;
+  color:blue;
+}
+#item8 {
+  background:url('https://1rxbfb2hflyo2jt6jd3f6sjr-wpengine.netdna-ssl.com/wp-content/uploads/2014/11/BN126-1.jpg');
+  background-size:cover;
+  color:yellow;
+}
+#item9 {
+  background:url('https://upload.wikimedia.org/wikipedia/commons/f/f2/Sa_green_gram.jpg');
+  background-size:cover;
+  color:rgb(122, 239, 255);
+}
+#item2c,#item5c,#item8c {
+  border-left:1px solid rgb(196, 196, 196);
+}
+#bttmtxt {
+  border-bottom:5px solid grey;
+  margin-bottom:20px;
+}
+#bttmtxt h2 {
+  text-align:center;
+  color:grey;
+  font-family:"K2D", sans-serif;
+  transform:translatey(-40px);
+}
