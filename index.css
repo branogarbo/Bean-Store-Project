@@ -98,18 +98,15 @@ body {
 .inventory h1 {
   margin:auto;
 }
-/*had to change padding to compensate for the margin:auto not working*/
 #regoff {
   grid-column:2 / 4;
-  padding-left:155px;
   color:rgb(51, 62, 73);
 }
 #sale {
   color:rgb(51, 62, 73);
 }
-/*had to change padding to compensate for the margin:auto not working*/
 #sale, #regoff {
-  margin-left:180px;
+  text-align:center;
 }
 #item1 {
   background:url('https://cdn.sodelicious.recipes/wp-content/uploads/2018/05/types-of-beans-fava-beans-1024x777.jpg');
